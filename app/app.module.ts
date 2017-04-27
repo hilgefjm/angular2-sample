@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent }  from './app.component';
-import { ProductListComponent } from './products/product-list.component';
 import { ProductFilterPipe } from './products/product-filter.pipe';
+import { ProductListComponent } from './products/product-list.component';
 import { StarComponent } from './shared/star.component';
 
 @NgModule({

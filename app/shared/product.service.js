@@ -6,22 +6,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var product_service_1 = require("./products/product.service");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.pageTitle = 'ACME Product Management';
+var ProductService = (function () {
+    function ProductService() {
     }
-    return AppComponent;
+    ProductService.prototype.getProducts = function () {
+    };
+    return ProductService;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'pm-app',
-        template: "\n    <div>\n        <h1>{{pageTitle}}</h1>\n        <pm-products></pm-products>\n    </div>\n    ",
-        providers: [
-            product_service_1.ProductService
-        ]
-    })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+ProductService = __decorate([
+    Injectable()
+], ProductService);
+exports.ProductService = ProductService;
+//# sourceMappingURL=product.service.js.map
