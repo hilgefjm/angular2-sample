@@ -74,6 +74,9 @@ var ProductListComponent = (function () {
     ProductListComponent.prototype.toggleImage = function () {
         this.isImageShown = !this.isImageShown;
     };
+    ProductListComponent.prototype.onRatingClicked = function (message) {
+        console.log(message);
+    };
     return ProductListComponent;
 }());
 ProductListComponent = __decorate([
