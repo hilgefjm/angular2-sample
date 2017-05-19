@@ -21,7 +21,9 @@ var ProductListComponent = (function () {
         this.listFilter = 'cart';
     }
     ProductListComponent.prototype.ngOnInit = function () {
-        this.products = this._productService.getProducts();
+        var _this = this;
+        this._productService.getProducts().subscribe(function (products) { return _this.products = products; }, function (error) { return _this.errorMessage = error; });
+        // this.products = this._productService.getProducts();
     };
     ProductListComponent.prototype.toggleImage = function () {
         this.isImageShown = !this.isImageShown;

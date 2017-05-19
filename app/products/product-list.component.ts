@@ -16,12 +16,17 @@ export class ProductListComponent implements OnInit {
   imageMargin: number = 2;
   isImageShown: boolean = false;
   listFilter: string = 'cart';
+  errorMessage: string;
 
   constructor (private _productService: ProductService) {
   }
 
   ngOnInit (): void {
-    this.products = this._productService.getProducts();
+    this._productService.getProducts().subscribe(
+      products => this.products = products,
+      error => this.errorMessage = <any>error
+    );
+    // this.products = this._productService.getProducts();
   }
 
   toggleImage (): void {
